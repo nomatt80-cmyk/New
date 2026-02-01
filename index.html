@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Rosu ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      animation: pop 1.2s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      animation: bounce 2s infinite;
+    }
+
+    .photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 15px auto;
+      border: 4px solid #ff8fab;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      animation: pop 1.5s ease;
+    }
+
+    p {
+      color: #444;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .emojis {
+      font-size: 26px;
+      margin: 10px 0;
+    }
+
+    .glow {
+      margin-top: 15px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff2f6e;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    .from {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #ff4d6d;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff2f6e, 0 0 10px #ff2f6e;
+      }
+      to {
+        text-shadow: 0 0 15px #ff8fab, 0 0 30px #ff8fab;
+      }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100vh); opacity: 0; }
+      20% { opacity: 1; }
+      100% { transform: translateY(-10vh); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>🎉 Happy Birthday Rosu 🎉</h1>
+
+    <!-- PHOTO -->
+    <img src="f63f65e6-f355-4d18-8a60-1c756e88fabb-1_all_70574.jpeg" alt="Rosu" class="photo">
+
+    <div class="emojis">🌹 🧸 🎂 🎈</div>
+
+    <p>
+      Rosu ❤️<br><br>
+      You are the sweetest part of my life.<br>
+      Your smile makes everything brighter.<br><br>
+      May your life be filled with love, laughter,
+      and endless happiness 💖
+    </p>
+
+    <div class="glow">I Love You ❤️</div>
+
+    <div class="from">— Forever yours, Kunju ❤️</div>
+  </div>
+
+  <!-- Floating Hearts -->
+  <script>
+    const hearts = ["❤️","💖","💕","💗"];
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }, 400);
+  </script>
+
+</body>
+</html>
